@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--
+    index.html - Home Page
+    This is the first page visitors see when they visit the website.
+    It contains a welcome message, featured cars, and key info.
+-->
+<html lang="en">
+
+<head>
+    <!-- Meta tags give the browser information about the page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naledi Motors - Home</title>
+
+    <!-- Link to our external CSS file that styles all pages -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER SECTION
+         Shows the company logo and name at the top.
+    ====================================================== -->
+    <header>
+        <!-- Logo: a red circle with the letter "N" -->
+        <div class="logo">N</div>
+
+        <!-- Company name and tagline next to the logo -->
+        <div class="header-text">
+            <h1>Naledi Motors</h1>
+            <p>Your Trusted Car Dealership in Botswana</p>
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         NAVIGATION BAR
+         Links that let users move between pages.
+         The "active" class highlights the current page.
+    ====================================================== -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- =====================================================
+         HERO BANNER
+         A large welcome banner with a call-to-action button.
+    ====================================================== -->
+    <div class="hero">
+
+    <!-- This wrapper lifts the text above the dark overlay -->
+    <div class="hero-content">
+        <h2>Find Your Perfect Car Today</h2>
+        <p>
+            Naledi Motors offers a wide selection of quality new and used vehicles
+            in Gaborone, Botswana. Drive away happy today!
+        </p>
+        <a href="inventory.html" class="hero-button">Browse Our Vehicles</a>
+    </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT AREA
+         This is where the main page content goes.
+    ====================================================== -->
+    <main>
+
+        <!-- ---- WHY CHOOSE US SECTION ---- -->
+        <h2 class="section-title">Why Choose Naledi Motors?</h2>
+
+        <!-- Three info cards displayed side by side -->
+        <div class="card-row">
+
+    <div class="card">
+        <!-- Replace emoji with an <img> tag pointing to your icon file -->
+        <div class="card-icon">
+            <img src="images/icon1.png" alt="Large Selection Icon">
+        </div>
+        <h3>Large Selection</h3>
+        <p>
+            We stock hundreds of quality vehicles — both new and pre-owned —
+            to suit every budget and lifestyle.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">
+            <img src="images/icon3.png" alt="Quality Assured Icon">
+        </div>
+        <h3>Quality Assured</h3>
+        <p>
+            Every vehicle goes through a full inspection before it reaches
+            our showroom floor.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">
+            <img src="images/icon2.png" alt="Easy Finance Icon">
+        </div>
+        <h3>Easy Finance</h3>
+        <p>
+            We work with leading banks to offer you flexible payment plans
+            that suit your budget.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">
+            <img src="images/icon4.png" alt="After-Sales Service Icon">
+        </div>
+        <h3>After-Sales Service</h3>
+        <p>
+            Our certified technicians are here to keep your vehicle running
+            smoothly long after you buy.
+        </p>
+    </div>
+
+</div>
+
+        <!-- Horizontal divider line -->
+        <hr class="divider">
+
+
+        <!-- ---- FEATURED VEHICLES SECTION ---- -->
+        <h2 class="section-title">Featured Vehicles</h2>
+        <p>Take a look at some of our most popular vehicles currently in stock.</p>
+
+        <!-- Two featured car image boxes side by side -->
+        <div class="card-row">
+
+            <div class="car-image-box">
+                <!--
+                    We use a placeholder image service here.
+                    In a real project, replace this src with your own image path,
+                    e.g. src="images/car1.jpg"
+                -->
+                <img
+                    src="images/img1.jpg"
+                    alt="BENZ"
+                    class="img-placeholder"
+                >
+                <div class="caption">E-CLASS — From P 380,000</div>
+            </div>
+
+            <div class="car-image-box">
+                <img
+                    src="images/img2.jpg"
+                    alt="BENZ"
+                    class="img-placeholder"
+                >
+                <div class="caption">GLC COUPE — From P 320,000</div>
+            </div>
+
+            <div class="car-image-box">
+                <img
+                    src="images/img3.jpg"
+                    alt="BENZ"
+                    class="img-placeholder"
+                >
+                <div class="caption">G-CLASS — From P 260,000</div>
+            </div>
+
+        </div>
+
+        <!-- Button to go to the full inventory page -->
+        <div style="margin-top: 25px; text-align: center;">
+            <a href="inventory.html" class="hero-button">View All Vehicles →</a>
+        </div>
+
+        <hr class="divider">
+
+
+        <!-- ---- ABOUT SNIPPET SECTION ---- -->
+        <h2 class="section-title">About Naledi Motors</h2>
+        <p>
+            Naledi Motors is a leading car dealership based in Gaborone, Botswana.
+            Since our founding, we have helped thousands of Batswana families and
+            businesses find the right vehicle at the right price.
+        </p>
+        <p>
+            We are an authorised dealer for several top automotive brands and pride
+            ourselves on our transparent pricing, friendly staff, and world-class
+            after-sales support.
+        </p>
+        <a href="about.html" class="hero-button" style="background-color: #1a1a2e;">
+            Learn More About Us →
+        </a>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER SECTION
+         Appears at the bottom of every page.
+    ====================================================== -->
+    <footer>
+        <p>
+            Naledi Motors | Plot 123, Main Mall, Gaborone, Botswana |
+            Tel: +267 395 0000
+        </p>
+        <p class="copyright">
+            &copy; 2026 Naledi Motors. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

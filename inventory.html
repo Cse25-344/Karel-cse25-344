@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--
+    inventory.html - Vehicle Inventory Page
+    This page lists vehicles currently available for sale.
+    Each vehicle is displayed in a card with an image, name, price, and specs.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naledi Motors - Vehicle Inventory</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER SECTION
+    ====================================================== -->
+    <header>
+        <div class="logo">N</div>
+        <div class="header-text">
+            <h1>Naledi Motors</h1>
+            <p>Your Trusted Car Dealership in Botswana</p>
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         NAVIGATION BAR
+         "inventory.html" link is marked active.
+    ====================================================== -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="inventory.html" class="active">Inventory</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+    <main>
+
+        <!-- Page heading -->
+        <h2 class="section-title">Vehicle Inventory</h2>
+        <p>
+            Browse our current selection of new and pre-owned vehicles.
+            All prices are in Botswana Pula (BWP). Contact us for more details
+            on any vehicle.
+        </p>
+
+        <!-- Information notice banner -->
+        <div class="info-banner" style="margin-top: 20px;">
+            <strong>Note:</strong> Prices shown exclude registration and licensing fees.
+            Finance options are available. Speak to our team for a personalised quote.
+        </div>
+
+
+        <!-- =====================================================
+             NEW VEHICLES SECTION
+        ====================================================== -->
+        <h2 class="section-title">New Vehicles</h2>
+
+        <!-- Vehicle cards in a row -->
+        <div class="card-row">
+
+            <!-- Vehicle Card 1 -->
+            <div class="vehicle-card">
+                <img
+                    src="images/img1.jpg"
+                    alt="BENZ"
+                    class="img-placeholder"
+                >
+                <div class="vehicle-details">
+                    <h3>E-CLASS</h3>
+                    <div class="vehicle-price">P 1,280,000</div>
+                    <p class="vehicle-specs">Year: 2023</p>
+                    <p class="vehicle-specs">Engine: 2.8L Diesel Turbocharged</p>
+                    <p class="vehicle-specs">Transmission: Automatic</p>
+                    <p class="vehicle-specs">Colour: White</p>
+                    <p class="vehicle-specs">Mileage: 0 km (Brand New)</p>
+                    <a href="contact.html" class="vehicle-btn">Enquire Now</a>
+                </div>
+            </div>
+
+            <!-- Vehicle Card 2 -->
+            <div class="vehicle-card">
+                <img
+                    src="images/img2.jpg"
+                    alt="Toyota Corolla 2023"
+                    class="img-placeholder"
+                >
+                <div class="vehicle-details">
+                    <h3>GLC COUPE</h3>
+                    <div class="vehicle-price">P 1,420,000</div>
+                    <p class="vehicle-specs">Year: 2023</p>
+                    <p class="vehicle-specs">Engine: 1.8L Petrol</p>
+                    <p class="vehicle-specs">Transmission: Automatic</p>
+                    <p class="vehicle-specs">Colour: Silver</p>
+                    <p class="vehicle-specs">Mileage: 0 km (Brand New)</p>
+                    <a href="contact.html" class="vehicle-btn">Enquire Now</a>
+                </div>
+            </div>
+
+            <!-- Vehicle Card 3 -->
+            <div class="vehicle-card">
+                <img
+                    src="images/img3.jpg"
+                    alt="Ford Ranger 2023"
+                    class="img-placeholder"
+                >
+                <div class="vehicle-details">
+                    <h3>G-CLASS</h3>
+                    <div class="vehicle-price">P 2,260,000</div>
+                    <p class="vehicle-specs">Year: 2023</p>
+                    <p class="vehicle-specs">Engine: 2.0L Bi-Turbo Diesel</p>
+                    <p class="vehicle-specs">Transmission: Automatic</p>
+                    <p class="vehicle-specs">Colour: Black</p>
+                    <p class="vehicle-specs">Mileage: 0 km (Brand New)</p>
+                    <a href="contact.html" class="vehicle-btn">Enquire Now</a>
+                </div>
+            </div>
+
+        </div><!-- end .card-row -->
+
+        <hr class="divider">
+
+
+        <!-- =====================================================
+             PRE-OWNED VEHICLES SECTION
+        ====================================================== -->
+        <h2 class="section-title">Pre-Owned Vehicles</h2>
+
+        <div class="card-row">
+
+            <!-- Used Vehicle Card 1 -->
+            <div class="vehicle-card">
+                <img
+                    src="images/img5.jpg"
+                    alt="BENZ"
+                    class="img-placeholder"
+                >
+                <div class="vehicle-details">
+                    <h3>A200</h3>
+                    <div class="vehicle-price">P 693,000</div>
+                    <p class="vehicle-specs">Year: 2020</p>
+                    <p class="vehicle-specs">Engine: 1.0L Turbo Petrol</p>
+                    <p class="vehicle-specs">Transmission: Manual</p>
+                    <p class="vehicle-specs">Colour: White</p>
+                    <p class="vehicle-specs">Mileage: 45,000 km</p>
+                    <a href="contact.html" class="vehicle-btn">Enquire Now</a>
+                </div>
+            </div>
+
+            <!-- Used Vehicle Card 2 -->
+            <div class="vehicle-card">
+                <img
+                    src="images/img6.jpg"
+                    alt="Nissan NP300 2019"
+                    class="img-placeholder"
+                >
+                <div class="vehicle-details">
+                    <h3>GLE300d</h3>
+                    <div class="vehicle-price">P 1,730,000</div>
+                    <p class="vehicle-specs">Year: 2019</p>
+                    <p class="vehicle-specs">Engine: 2.5L Diesel</p>
+                    <p class="vehicle-specs">Transmission: Manual</p>
+                    <p class="vehicle-specs">Colour: Black</p>
+                    <p class="vehicle-specs">Mileage: 78,000 km</p>
+                    <a href="contact.html" class="vehicle-btn">Enquire Now</a>
+                </div>
+            </div>
+
+            <!-- Used Vehicle Card 3 -->
+            <div class="vehicle-card">
+                <img
+                    src="images/img7.jpg"
+                    alt="BENZ"
+                    class="img-placeholder"
+                >
+                <div class="vehicle-details">
+                    <h3>E200</h3>
+                    <div class="vehicle-price">P 1,230,000</div>
+                    <p class="vehicle-specs">Year: 2021</p>
+                    <p class="vehicle-specs">Engine: 2.0L Petrol</p>
+                    <p class="vehicle-specs">Transmission: Automatic</p>
+                    <p class="vehicle-specs">Colour: Blue</p>
+                    <p class="vehicle-specs">Mileage: 32,000 km</p>
+                    <a href="contact.html" class="vehicle-btn">Enquire Now</a>
+                </div>
+            </div>
+
+        </div><!-- end .card-row -->
+
+        <hr class="divider">
+
+
+        <!-- ---- CALL TO ACTION ---- -->
+        <div style="text-align: center; padding: 20px 0;">
+            <p style="font-size: 17px; margin-bottom: 15px;">
+                Can't find what you're looking for? We can source any vehicle for you!
+            </p>
+            <a href="contact.html" class="hero-button">Contact Our Sales Team</a>
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer>
+        <p>
+            Naledi Motors | Plot 123, Main Mall, Gaborone, Botswana |
+            Tel: +267 395 0000
+        </p>
+        <p class="copyright">
+            &copy; 2026 Naledi Motors. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

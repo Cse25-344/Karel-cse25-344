@@ -1,0 +1,645 @@
+/* ============================================================
+   style.css - Naledi Motors Website Stylesheet
+   This file styles ALL pages of the website.
+   Each section is clearly labeled with comments.
+   ============================================================ */
+
+
+/* ============================================================
+   1. GENERAL / RESET STYLES
+   These styles apply to the whole page.
+   We remove default browser spacing and set a base font.
+   ============================================================ */
+
+/* The * selector targets every element on the page */
+* {
+    margin: 0;          /* Remove default outer spacing */
+    padding: 0;         /* Remove default inner spacing */
+    box-sizing: border-box; /* Makes sizing easier to manage */
+}
+
+/* Style for the body (main page area) */
+body {
+    font-family: Georgia, "Times New Roman", serif; /* Clean readable font */
+    font-size: 16px;            /* Base text size */
+    background-color: #f5f5f5;  /* Light grey page background */
+    color: #040404;             /* Dark text colour for readability */
+    line-height: 1.6;           /* Space between lines of text */
+}
+
+/* Style for all links (anchor tags) */
+a {
+    text-decoration: none;  /* Remove the underline from links */
+    color: inherit;         /* Links inherit the colour of their parent */
+}
+
+
+/* ============================================================
+   2. HEADER STYLES
+   The header appears at the top of every page.
+   It contains the company logo/name and tagline.
+   ============================================================ */
+
+header {
+    background-color: #000000;  /* Deep navy blue background */
+    color: #ffffff;              /* White text */
+    padding: 20px 40px;          /* Space inside the header */
+    display: flex;               /* Lay out children side by side */
+    align-items: center;         /* Vertically centre the items */
+    gap: 20px;                   /* Space between logo and text */
+}
+
+/* The logo circle with the letter "N" */
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;   /* Red accent colour */
+    border-radius: 50%;          /* Makes the box a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    flex-shrink: 0;              /* Stop the logo from shrinking */
+}
+
+/* Company name in the header */
+.header-text h1 {
+    font-size: 28px;
+    letter-spacing: 2px;        /* Spread letters apart slightly */
+    text-transform: uppercase;  /* Make text all capitals */
+    color: #ffffff;
+}
+
+/* Tagline below the company name */
+.header-text p {
+    font-size: 13px;
+    color: #aaaaaa;             /* Light grey for the tagline */
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+
+/* ============================================================
+   3. NAVIGATION BAR STYLES
+   The navigation bar lets users move between pages.
+   ============================================================ */
+
+nav {
+    background-color: #f5f5f5;  /* Red navigation bar */
+    padding: 0 40px;
+}
+
+/* The list that holds the navigation links */
+nav ul {
+    list-style: none;   /* Remove bullet points from the list */
+    display: flex;      /* Put list items side by side */
+    gap: 0;
+}
+
+/* Each navigation list item */
+nav ul li a {
+    display: block;             /* Make the link fill the list item */
+    color: #000000;             /* White text */
+    padding: 15px 22px;         /* Space around each link */
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;  /* ALL CAPS navigation text */
+    transition: background-color 0.2s; /* Smooth colour change on hover */
+}
+
+/* Hover effect: darkens the link background when you mouse over it */
+nav ul li a:hover {
+    background-color: #1912e0;  /* Darker red on hover */
+}
+
+/* Active page: highlights the current page link */
+nav ul li a.active {
+    background-color: #f8f8f8;
+    border-bottom: 3px solid #1414d4;
+}
+
+
+/* ============================================================
+   4. HERO BANNER STYLES
+   The hero is the large banner at the top of the home page.
+   ============================================================ */
+
+.hero {
+    /* --- Background image settings --- */
+    background-image: url('../images/hero-car.jpg'); /* Path to your image */
+    background-size: cover;       /* Stretch image to fill the whole box */
+    background-position: center;  /* Centre the image inside the box */
+    background-repeat: no-repeat; /* Do not tile/repeat the image */
+
+    /* --- Layout --- */
+    position: relative;   /* Needed so the ::before overlay can sit on top */
+    text-align: center;
+    padding: 100px 40px;  /* Increased padding for a taller hero with image */
+}
+
+/* ---- Dark overlay on top of the image ----
+   This semi-transparent black layer sits between the image
+   and the text, making the white text easier to read.
+   ::before inserts a fake element as the FIRST child of .hero */
+.hero::before {
+    content: '';              /* Required for ::before to appear */
+    position: absolute;       /* Placed relative to .hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55); /* Black at 55% transparency */
+}
+
+/* ---- Text container inside the hero ----
+   position: relative + z-index lifts the text ABOVE the ::before overlay */
+.hero-content {
+    position: relative; /* Allows z-index to work */
+    z-index: 1;         /* 1 = sits above the overlay (which has z-index 0) */
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #cccccc;
+    max-width: 600px;           /* Limits text width for readability */
+    margin: 0 auto 25px auto;   /* Centre the paragraph */
+}
+
+/* The call-to-action button in the hero */
+.hero-button {
+    display: inline-block;
+    background-color: #1006dd;
+    color: #ffffff;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-button:hover {
+    background-color: #1a06ce;
+}
+
+
+/* ============================================================
+   5. MAIN CONTENT AREA STYLES
+   This is the main section of each page where content sits.
+   ============================================================ */
+
+main {
+    max-width: 1100px;          /* Maximum width of the content area */
+    margin: 40px auto;          /* Centre the content on the page */
+    padding: 0 20px;            /* Small padding on left and right */
+}
+
+/* Section headings (e.g. "Our Services", "Why Choose Us") */
+.section-title {
+    font-size: 26px;
+    color: #000000;
+    margin-bottom: 10px;
+    border-left: 5px solid #322ce6; /* Red left border as a decorative accent */
+    padding-left: 15px;
+}
+
+/* A horizontal line used as a divider */
+.divider {
+    border: none;
+    border-top: 2px solid #dddddd;
+    margin: 30px 0;
+}
+
+/* General paragraph spacing */
+p {
+    margin-bottom: 15px;
+}
+
+
+/* ============================================================
+   6. CARD / BOX STYLES
+   Cards are used to display features, services, and vehicles.
+   ============================================================ */
+
+/* A container that holds multiple cards side by side */
+.card-row {
+    display: flex;          /* Put cards side by side */
+    flex-wrap: wrap;        /* Allow cards to wrap to next line */
+    gap: 20px;              /* Space between each card */
+    margin-top: 25px;
+}
+
+/* A single card box */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 25px;
+    flex: 1;                /* Each card grows to fill available space */
+    min-width: 220px;       /* Minimum width before wrapping */
+}
+
+/* The icon or emoji at the top of a card */
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.card-icon img {
+    width: 50px;       /* Set a fixed width for all icons */
+    height: 50px;      /* Set a fixed height to keep them uniform */
+    object-fit: contain; /* Keeps the icon proportions — no stretching */
+}
+
+/* The heading inside a card */
+.card h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+/* The text inside a card */
+.card p {
+    font-size: 15px;
+    color: #020405;
+    margin-bottom: 0;
+}
+
+
+/* ============================================================
+   7. IMAGE STYLES
+   Controls how images are displayed on the page.
+   ============================================================ */
+
+/* A container for a car image with a caption */
+.car-image-box {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    overflow: hidden;       /* Hides anything outside the rounded corners */
+    flex: 1;
+    min-width: 260px;
+}
+
+/* The image itself inside the box */
+.car-image-box img {
+    width: 100%;            /* Image fills the full width of its box */
+    height: 200px;          /* Fixed height */
+    object-fit: cover;      /* Crop image to fill space without distortion */
+    display: block;
+}
+
+/* The caption text below the image */
+.car-image-box .caption {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #1a1a2e;
+    font-size: 15px;
+}
+
+/* A simple full-width image used on the About page */
+.full-width-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 25px;
+}
+
+/* Image placeholder (used when real images are not available) */
+.img-placeholder {
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+}
+
+
+/* ============================================================
+   8. VEHICLE INVENTORY STYLES
+   Used on the inventory.html page to show cars for sale.
+   ============================================================ */
+
+/* A single vehicle listing card */
+.vehicle-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 260px;
+}
+
+/* The image inside the vehicle card */
+.vehicle-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* The details section below the vehicle image */
+.vehicle-details {
+    padding: 18px;
+}
+
+/* Vehicle name/model heading */
+.vehicle-details h3 {
+    font-size: 18px;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+/* Price displayed in red */
+.vehicle-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+/* Small specs text (year, mileage etc.) */
+.vehicle-specs {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+/* Enquire button on vehicle cards */
+.vehicle-btn {
+    display: inline-block;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.vehicle-btn:hover {
+    background-color: #e63946;
+}
+
+
+/* ============================================================
+   9. SERVICES PAGE STYLES
+   Used on services.html to show each service offered.
+   ============================================================ */
+
+/* A single service item block */
+.service-item {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* The icon/emoji for each service */
+.service-icon {
+    font-size: 38px;
+    flex-shrink: 0;     /* Icon will not shrink */
+}
+
+.service-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Keeps icon proportions — no stretching */
+}
+
+/* The text section next to the icon */
+.service-info h3 {
+    font-size: 20px;
+    color: #060606;
+    margin-bottom: 8px;
+}
+
+.service-info p {
+    color: #555555;
+    margin-bottom: 0;
+}
+
+
+/* ============================================================
+   10. CONTACT FORM STYLES
+   Used on contact.html to style the feedback form.
+   ============================================================ */
+
+/* The box that wraps the form */
+.form-container {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 35px 40px;
+    max-width: 600px;
+}
+
+/* Each label + input group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Form field labels */
+.form-group label {
+    display: block;         /* Label on its own line */
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+/* Text inputs and textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%;            /* Fill the full width of the form */
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: inherit;   /* Use the same font as the rest of the page */
+    background-color: #fafafa;
+    color: #222222;
+}
+
+/* Highlight the field when the user clicks on it */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;                          /* Remove default browser outline */
+    border-color: #e63946;                  /* Red border when focused */
+    background-color: #ffffff;
+}
+
+/* The textarea for the message */
+.form-group textarea {
+    height: 130px;
+    resize: vertical;   /* Allow user to resize vertically only */
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: #e63946;
+    color: #ffffff;
+    border: none;               /* Remove default button border */
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;            /* Show a pointer cursor on hover */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #c1121f;
+}
+
+
+/* ============================================================
+   11. CONTACT INFO STYLES
+   Displays address, phone and email on the contact page.
+   ============================================================ */
+
+/* A box for one piece of contact info */
+.contact-info-box {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 20px 25px;
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+}
+
+/* The large icon emoji */
+.contact-info-box .contact-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* The label (e.g. "Phone", "Email") */
+.contact-info-box h4 {
+    font-size: 15px;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* The actual contact value */
+.contact-info-box p {
+    font-size: 15px;
+    color: #555555;
+    margin-bottom: 0;
+}
+
+.contact-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Keeps icon proportions — no stretching */
+}
+
+
+/* ============================================================
+   12. TABLE STYLES
+   Used to display structured data in a clean table.
+   ============================================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;  /* Remove gaps between table cells */
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 13px 18px;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 12px 18px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 15px;
+    color: #333333;
+}
+
+/* Alternating row colours for readability */
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+
+/* ============================================================
+   13. INFO BANNER / NOTICE BOX STYLES
+   Used to highlight important notes or information.
+   ============================================================ */
+
+.info-banner {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 18px 25px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.info-banner strong {
+    color: #e63946;
+}
+
+
+/* ============================================================
+   14. FOOTER STYLES
+   The footer appears at the bottom of every page.
+   ============================================================ */
+
+footer {
+    background-color: #000000;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 25px 40px;
+    margin-top: 60px;
+    font-size: 14px;
+}
+
+/* Footer links */
+footer a {
+    color: #e63946;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* The copyright line */
+.copyright {
+    margin-top: 8px;
+    color: #666666;
+    font-size: 13px;
+}

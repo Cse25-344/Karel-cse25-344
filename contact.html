@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--
+    contact.html - Contact / Feedback Page
+    This page contains a form where visitors can send a message
+    to Naledi Motors. It also shows contact details.
+
+    HTML5 FORM VALIDATION is used:
+    - The "required" attribute prevents empty submissions.
+    - type="email" checks for a valid email format.
+    - type="tel" is used for telephone numbers.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naledi Motors - Contact Us</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER SECTION
+    ====================================================== -->
+    <header>
+        <div class="logo">N</div>
+        <div class="header-text">
+            <h1>Naledi Motors</h1>
+            <p>Your Trusted Car Dealership in Botswana</p>
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         NAVIGATION BAR
+         "contact.html" link is marked active.
+    ====================================================== -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+    <main>
+
+        <!-- Page heading -->
+        <h2 class="section-title">Contact Us</h2>
+        <p>
+            We'd love to hear from you! Fill in the form below and one of our
+            team members will get back to you within 24 hours.
+        </p>
+
+        <hr class="divider">
+
+
+        <!-- =====================================================
+             CONTACT INFO BOXES
+             Three boxes showing phone, email, and address.
+        ====================================================== -->
+        <div class="card-row" style="margin-bottom: 35px;">
+
+    <div class="contact-info-box">
+        <div class="contact-icon">
+            <img src="images/icon9.png" alt="Phone Icon">
+        </div>
+        <h4>Phone</h4>
+        <p>+267 395 0000</p>
+        <p>+267 395 0001</p>
+    </div>
+
+    <div class="contact-info-box">
+        <div class="contact-icon">
+            <img src="images/icon10.png" alt="Email Icon">
+        </div>
+        <h4>Email</h4>
+        <p>info@naledimotors.co.bw</p>
+        <p>sales@naledimotors.co.bw</p>
+    </div>
+
+    <div class="contact-info-box">
+        <div class="contact-icon">
+            <img src="images/icon11.png" alt="Address Icon">
+        </div>
+        <h4>Address</h4>
+        <p>Plot 123, Main Mall</p>
+        <p>Gaborone, Botswana</p>
+    </div>
+
+    <div class="contact-info-box">
+        <div class="contact-icon">
+            <img src="images/icon12.png" alt="Business Hours Icon">
+        </div>
+        <h4>Hours</h4>
+        <p>Mon–Fri: 08:00–17:30</p>
+        <p>Saturday: 08:00–13:00</p>
+    </div>
+
+</div><!-- end .card-row -->
+
+
+        <!-- =====================================================
+             FEEDBACK / CONTACT FORM
+             All fields use the "required" attribute for HTML5 validation.
+             The browser will prevent form submission if fields are empty.
+        ====================================================== -->
+        <h2 class="section-title">Send Us a Message</h2>
+
+        <div class="form-container">
+
+            <!--
+                The <form> element wraps all the form fields.
+                action="#" means the form doesn't go anywhere (for demo purposes).
+                In a real website, action would point to a server-side script.
+                method="post" means the data is sent securely in the request body.
+            -->
+            <form action="#" method="post">
+
+                <!-- ---- NAME FIELD ---- -->
+                <div class="form-group">
+                    <!--
+                        The "for" attribute on the label must match
+                        the "id" attribute on the input field.
+                        This links them together for accessibility.
+                    -->
+                    <label for="name">Full Name *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="e.g. Kefilwe Mokobi"
+                        required
+                    >
+                    <!--
+                        required = This field MUST be filled in before submitting.
+                        placeholder = Light grey hint text inside the field.
+                    -->
+                </div>
+
+                <!-- ---- EMAIL FIELD ---- -->
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="e.g. kefilwe@example.com"
+                        required
+                    >
+                    <!--
+                        type="email" tells the browser to validate
+                        that the input looks like a real email address.
+                    -->
+                </div>
+
+                <!-- ---- PHONE NUMBER FIELD ---- -->
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="e.g. +267 71 234 567"
+                        required
+                    >
+                    <!--
+                        type="tel" tells the browser this is a phone number.
+                        On mobile phones, it opens the number keyboard.
+                    -->
+                </div>
+
+                <!-- ---- SUBJECT / ENQUIRY TYPE ---- -->
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <!--
+                        A <select> element creates a dropdown menu.
+                        The user picks one option from the list.
+                    -->
+                    <select id="subject" name="subject" style="
+                        width: 100%;
+                        padding: 12px 15px;
+                        border: 1px solid #cccccc;
+                        border-radius: 4px;
+                        font-size: 15px;
+                        font-family: inherit;
+                        background-color: #fafafa;
+                        color: #222222;
+                    ">
+                        <option value="">-- Please select a subject --</option>
+                        <option value="new-vehicle">New Vehicle Enquiry</option>
+                        <option value="used-vehicle">Used Vehicle Enquiry</option>
+                        <option value="service">Workshop / Service Booking</option>
+                        <option value="finance">Finance Enquiry</option>
+                        <option value="trade-in">Trade-In Valuation</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- ---- MESSAGE FIELD ---- -->
+                <div class="form-group">
+                    <label for="message">Your Message *</label>
+                    <!--
+                        <textarea> is used for multi-line text input.
+                        rows="5" sets the visible height of the box.
+                    -->
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- ---- SUBMIT BUTTON ---- -->
+                <!--
+                    type="submit" makes this button submit the form.
+                    The browser will check all "required" fields first.
+                    If any are empty, it will show an error message.
+                -->
+                <button type="submit" class="submit-btn">
+                    Send Message
+                </button>
+
+            </form><!-- end form -->
+
+        </div><!-- end .form-container -->
+
+        <hr class="divider">
+
+
+        <!-- ---- EXTRA INFORMATION ---- -->
+        <h2 class="section-title">Visit Our Showroom</h2>
+        <p>
+            We welcome walk-in visitors to our showroom in Gaborone. Come in, speak
+            to our sales team, and take a test drive. No appointment necessary —
+            although booking ahead means we can prepare the specific vehicle you
+            are interested in.
+        </p>
+        <p>
+            Our showroom is located on the Main Mall in Gaborone, next to the
+            Post Office. Ample parking is available on site.
+        </p>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer>
+        <p>
+            Naledi Motors | Plot 123, Main Mall, Gaborone, Botswana |
+            Tel: +267 395 0000
+        </p>
+        <p class="copyright">
+            &copy; 2026 Naledi Motors. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
