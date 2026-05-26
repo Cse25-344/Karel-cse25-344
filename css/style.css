@@ -1,15 +1,11 @@
-/* ============================================================
-   style.css - Naledi Motors Website Stylesheet
+/*style.css - Naledi Motors Website Stylesheet
    This file styles ALL pages of the website.
-   Each section is clearly labeled with comments.
-   ============================================================ */
+   Each section is clearly labeled with comments.*/
 
 
-/* ============================================================
-   1. GENERAL / RESET STYLES
+/*GENERAL
    These styles apply to the whole page.
-   We remove default browser spacing and set a base font.
-   ============================================================ */
+   We remove default browser spacing and set a base font.*/
 
 /* The * selector targets every element on the page */
 * {
@@ -34,11 +30,9 @@ a {
 }
 
 
-/* ============================================================
-   2. HEADER STYLES
+/*HEADER STYLES
    The header appears at the top of every page.
-   It contains the company logo/name and tagline.
-   ============================================================ */
+   It contains the company logo/name and taglible stuff*/
 
 header {
     background-color: #000000;  /* Deep navy blue background */
@@ -81,10 +75,8 @@ header {
 }
 
 
-/* ============================================================
-   3. NAVIGATION BAR STYLES
-   The navigation bar lets users move between pages.
-   ============================================================ */
+/*NAVIGATION BAR STYLES
+   The navigation bar lets users move between pages.*/
 
 nav {
     background-color: #f5f5f5;  /* Red navigation bar */
@@ -122,12 +114,10 @@ nav ul li a.active {
 }
 
 
-/* ============================================================
-   4. HERO BANNER STYLES
-   The hero is the large banner at the top of the home page.
-   ============================================================ */
+/*HERO BANNER STYLES
+   The hero is the large banner at the top of the home page.*/
 
-.hero {
+.banner {
     /* --- Background image settings --- */
     background-image: url('../images/hero-car.jpg'); /* Path to your image */
     background-size: cover;       /* Stretch image to fill the whole box */
@@ -144,7 +134,7 @@ nav ul li a.active {
    This semi-transparent black layer sits between the image
    and the text, making the white text easier to read.
    ::before inserts a fake element as the FIRST child of .hero */
-.hero::before {
+.banner::before {
     content: '';              /* Required for ::before to appear */
     position: absolute;       /* Placed relative to .hero */
     top: 0;
@@ -161,13 +151,13 @@ nav ul li a.active {
     z-index: 1;         /* 1 = sits above the overlay (which has z-index 0) */
 }
 
-.hero h2 {
+.banner h2 {
     font-size: 36px;
     margin-bottom: 15px;
     color: #ffffff;
 }
 
-.hero p {
+.banner p {
     font-size: 18px;
     color: #cccccc;
     max-width: 600px;           /* Limits text width for readability */
@@ -175,7 +165,7 @@ nav ul li a.active {
 }
 
 /* The call-to-action button in the hero */
-.hero-button {
+.banner-button {
     display: inline-block;
     background-color: #1006dd;
     color: #ffffff;
@@ -187,15 +177,13 @@ nav ul li a.active {
     letter-spacing: 1px;
 }
 
-.hero-button:hover {
+.banner-button:hover {
     background-color: #1a06ce;
 }
 
 
-/* ============================================================
-   5. MAIN CONTENT AREA STYLES
-   This is the main section of each page where content sits.
-   ============================================================ */
+/*MAIN CONTENT AREA 
+   This is the main section of each page where content sits.*/
 
 main {
     max-width: 1100px;          /* Maximum width of the content area */
@@ -225,10 +213,8 @@ p {
 }
 
 
-/* ============================================================
-   6. CARD / BOX STYLES
-   Cards are used to display features, services, and vehicles.
-   ============================================================ */
+/*BOX STYLES
+   Cards are used to display features, services, and vehicles.*/
 
 /* A container that holds multiple cards side by side */
 .card-row {
@@ -275,10 +261,8 @@ p {
 }
 
 
-/* ============================================================
-   7. IMAGE STYLES
-   Controls how images are displayed on the page.
-   ============================================================ */
+/*IMAGE STYLES
+   Controls how images are displayed on the page.*/
 
 /* A container for a car image with a caption */
 .car-image-box {
@@ -329,10 +313,8 @@ p {
 }
 
 
-/* ============================================================
-   8. VEHICLE INVENTORY STYLES
-   Used on the inventory.html page to show cars for sale.
-   ============================================================ */
+/*VEHICLE INVENTORY STYLES
+   Used on the inventory.html page to show cars for sale.*/
 
 /* A single vehicle listing card */
 .vehicle-card {
@@ -396,10 +378,8 @@ p {
 }
 
 
-/* ============================================================
-   9. SERVICES PAGE STYLES
-   Used on services.html to show each service offered.
-   ============================================================ */
+/*SERVICES PAGE STYLES
+   Used on services.html to show each service offered.*/
 
 /* A single service item block */
 .service-item {
@@ -438,10 +418,8 @@ p {
 }
 
 
-/* ============================================================
-   10. CONTACT FORM STYLES
-   Used on contact.html to style the feedback form.
-   ============================================================ */
+/*CONTACT FORM STYLES
+   Used on contact.html to style the feedback form.*/
 
 /* The box that wraps the form */
 .form-container {
@@ -513,10 +491,8 @@ p {
 }
 
 
-/* ============================================================
-   11. CONTACT INFO STYLES
-   Displays address, phone and email on the contact page.
-   ============================================================ */
+/*CONTACT INFO STYLES
+   Displays address, phone and email on the contact page.*/
 
 /* A box for one piece of contact info */
 .contact-info-box {
@@ -558,10 +534,8 @@ p {
 }
 
 
-/* ============================================================
-   12. TABLE STYLES
-   Used to display structured data in a clean table.
-   ============================================================ */
+/*TABLE STYLES
+   Used to display structured data in a clean table.*/
 
 table {
     width: 100%;
@@ -595,10 +569,8 @@ tr:nth-child(even) td {
 }
 
 
-/* ============================================================
-   13. INFO BANNER / NOTICE BOX STYLES
-   Used to highlight important notes or information.
-   ============================================================ */
+/*INFO BANNER
+   Used to highlight important notes or information.*/
 
 .info-banner {
     background-color: #1a1a2e;
@@ -614,10 +586,8 @@ tr:nth-child(even) td {
 }
 
 
-/* ============================================================
-   14. FOOTER STYLES
-   The footer appears at the bottom of every page.
-   ============================================================ */
+/*FOOTER STYLES
+   The footer appears at the bottom of every page.*/
 
 footer {
     background-color: #000000;
